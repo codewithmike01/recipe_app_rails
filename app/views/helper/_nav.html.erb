@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+  <%= link_to 'Recipe 2M', root_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to current_user.name, users_path , class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Foods', user_foods_path(current_user.id) , class: "nav-link" %>
+        </li>
+         <li class="nav-item">
+          <%= link_to 'Recipe', user_recipes_path(current_user.id) , class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+        <%= link_to 'Public-Recipe',  user_public_index_path(current_user.id) , class: "nav-link" %>
+       </li>
+        <li class="nav-item">
+          <%= button_to 'Log Out', destroy_user_session_path , method: :delete, class: "nav-link btn btn-primary-outline" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Register', new_user_registration_path , class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Log In', new_user_session_path , class: "nav-link" %>
+        </li>
+    
+      <% end %>
+    </ul>
+  </div>
+</div>
+</nav>

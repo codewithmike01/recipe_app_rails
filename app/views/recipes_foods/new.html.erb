@@ -1,0 +1,25 @@
+<% def form_select%>
+<% array = []%>
+  <% @foods.each do |food|%>
+    <% unless RecipeFood.quantity?(food.id) %>
+      <% array.push(["#{food.name}","#{food.id}"])%>
+    <%end%>
+  <%end%>
+  <%array%>
+<%end%>
+
+
+<div class = 'container pb-4'>
+  <h1 class ='text-center mt-4' >Add Food Quantity</h1>
+
+  <div class = 'container col-4'>
+    <%= form_with model: @recipe_food, url: user_recipe_recipe_foods_path, scope: :recipe_food  do |form| %>
+      <%= form.label 'Select a food', class: 'fs-5' %>
+      <%= form.select :food_id, options_for_select(form_select) , {}, class:'form-control select mb-4', aria_label: "form-select-sm example" %>
+      <%= form.label 'Quantity', class: 'fs-5' %>
+      <%= form.text_field :quantity, class:'form-control select mb-4' %>
+      <%= form.submit 'Add quantity', class: 'btn btn-primary text-light' %>
+    <%end%>
+  </div>
+</div>
+

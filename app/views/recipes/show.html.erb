@@ -1,0 +1,32 @@
+<div class = "container py-4">
+  <h1 class = 'text-center mt-4'><strong> <%= @recipe.name %> </strong></h1>
+
+  <div class = 'container col-8 flex-column mt-4'>
+    <div class = 'd-flex justify-content-between'>
+      <p>Praration time: <%= @recipe.preparation_time %> hour</p>
+      <!-- Default switch -->
+      <%= form_with model: @recipe, url: user_recipes_path, scope: :recipe  do |form| %>
+        <div class="form-check form-switch">
+          <%= form.check_box :public, class: "form-check-input disabled", onchange: "#{Recipe.recipe_update_public(@recipe.id)}", checked: @recipe.public   %>
+          <%= form.label :public, 'public', class: "form-check-label"%> 
+        </div>
+      <%end%>
+    </div>
+    <div>
+      <p> Cooking time: <%= @recipe.cooking_time%> hours </p>
+    </div>
+    <p> <%= @recipe.description%> </p>
+  </div>
+
+  <div class = 'container col-8 d-flex justify-content-between mt-4 mb-4'>
+    <%= link_to 'Generate shopping list', user_shops_path(current_user.id), class: 'btn btn-primary text-light' %>
+    <% if can? :create, @recipe%>
+    <%= link_to 'Add ingredients', new_user_recipe_recipe_food_path(current_user.id, @recipe.id), class: 'btn btn-primary text-light' %>
+    <%end%>
+  </div>
+  <hr class = 'container col-8 mt-3'>
+
+  <%= render 'helper/food_quantity' %>
+</div>
+
+  

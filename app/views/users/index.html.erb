@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+  <div class="card mb-4 border-5 p-3 m-3 bg-success bg-gradient" style="min-width: 540px;">
+     <div class="fs-2">
+        <p> User Name: <%= user.name %></p>
+        <p> User Email: <%= user.email %></p>
+     </div>
+  </div>
+  <% end %>
