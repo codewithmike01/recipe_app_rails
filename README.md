@@ -4,18 +4,6 @@
 
 ## Project screenshots
 
-Expand
-README.md
-3 KB
-
-
-
-# Blog App
-
-> The recipe is created with ruby on rails and allows logged in users to create recipes from food items they have available. It also allows them to view public recipes shared by other users.
-
-## Project screenshots
-
 ![screenshot()]()
 
 Additional description about the project and its features.
