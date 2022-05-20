@@ -1,12 +1,18 @@
-# Blog App
+# Recipe app with rails
 
 > The recipe is created with ruby on rails and allows logged in users to create recipes from food items they have available. It also allows them to view public recipes shared by other users.
 
-## Project screenshots
+## Project screenshot
 
-![screenshot()]()
+![Screenshot from 2022-05-20 09-38-41](https://user-images.githubusercontent.com/58771507/169492476-e7a6640d-55bd-495f-8cd5-8134164e5af7.png)
 
-Additional description about the project and its features.
+## Project screencast
+
+https://user-images.githubusercontent.com/58771507/169491582-9f808b68-e362-4ea5-b255-9ba3c7ec8bb0.mp4
+
+##### Additional description about the project and its features.
+
+This project give options to add food and recipe, also quantity can be added to food based on the praparation requirements
 
 ## Built With
 
@@ -15,31 +21,21 @@ Additional description about the project and its features.
 
 ## How to Setup
 
-> You can simply clone or download [this repository](https://github.com/Mithi-code/recipe-app), and use your favorite browser or code editor to run this program.
+> Clone the repository
 
-- To open the project after download, simply double click the index.html file
-
-- To open this project using vs code ( for this example) or your favorite code editor, you can follow the guide below:
-  > in your cmd or command line navigate to where this project is located, then;
-
-```cmd
-cd recipe-app
+```
+git clone https://github.com/Ginohmk/recipe_app_rails.git
 ```
 
-> thereafter run
+> Navigate to the cloned project
 
 ```cmd
-code .
+cd recipe_app_rails
 ```
 
 ## How to Run the App through terminal
 
-- To run the application through trminal, make sure ruby and IRB is installed in your computer then follow the guide below:
-  > in your cmd or command line navigate to where this project is located, then;
-
-```cmd
-cd recipe-app
-```
+> You need to have ruby and ruby on rails installed on your machine
 
 ## Install Gems
 
@@ -53,7 +49,7 @@ bundle install
 rails db:reset
 ```
 
-Incase its the first time:
+> In case its the first time:
 
 ```cmd
 rails db:create
@@ -68,18 +64,16 @@ rails db:migrate
 > thereafter run
 
 ```cmd
-.rails s
+rails s
 ```
 
-## Author
+## Authors
 
 👤 **Mithi**
 
 [@githubhandle](https://github.com/Mithi-code/)
 [@twitterhandle](https://twitter.com/sam_mongare)
-[LinkedIn](https://www.linkedin.com/in/mithicode/)
-
-## Collabrator
+[@LinkedIn](https://www.linkedin.com/in/mithicode/)
 
 👤 **Mike**
 
@@ -106,5 +100,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed
-README.md
-3 KB
