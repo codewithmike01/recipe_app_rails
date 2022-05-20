@@ -1,0 +1,17 @@
+
+<div class ='container pt-4 mb-4'>
+  <h1 class = 'text-center mb-4 mt-3'> Add Food </h1> 
+  <div class = 'container col-6'>
+    <%= form_with model: @food, url: user_foods_path, scope: :food  do |form| %>
+ 
+      <%= form.text_field :name, class:"form-control mb-3", id: 'name', placeholder: 'Name of food', aria_label: "Name of food"  %>
+   
+      <%= form.text_field :price, class: "form-control mb-3", id: 'price', placeholder: "Price of food (in dollars)", aria_label: "Price of food" %>
+   
+      <%= form.select :measurement_unit, options_for_select([['Selelct Measurement unit', 'units'],['Grams', 'grams'], ['Units', 'units']],"Selelct Measurement unit"), {}, class:'form-control select', id: 'measurement_unit', aria_label: "form-select-sm example" %>
+      <div>
+        <%= form.submit 'Create Food', class: 'btn btn-primary text-light mt-3' %>
+      </div>
+    <%end%>
+  </div>
+</div>

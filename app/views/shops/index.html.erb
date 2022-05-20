@@ -1,0 +1,14 @@
+<div class = 'container pt-4 mb-4'>
+  <h1 class= 'text-center mb-4'> Shopping List </h1>
+
+  <div>
+    <div class = 'container pt-3 d-flex justify-content-between col-10'>
+      <p> <strong>Amount of food items to buy:</strong> <%= Food.total_food(current_user.id)%> </p>
+      <p>Total value of food needed: $<%= RecipeFood.total_value_of_food(current_user.id)%> </p>
+    </div>
+  </div>
+
+  <div class = 'container col-10'>
+    <%= render 'helper/shoplist' %>
+  </div>
+</div>
